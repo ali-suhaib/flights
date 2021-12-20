@@ -122,3 +122,175 @@ Completed 200 OK in 1ms (Views: 0.7ms | Allocations: 409)
   [1m[36mAirline Load (1.1ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" /* loading for inspect */ ORDER BY id ASC LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mAirline Load (0.5ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" /* loading for inspect */ ORDER BY id ASC LIMIT $1[0m  [["LIMIT", 11]]
   [1m[36mAirline Load (0.7ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for ::1 at 2021-12-18 02:10:10 +0500
+  [1m[35m (6.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ali/.rvm/gems/ruby-3.0.0@open-flights/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ali/.rvm/gems/ruby-3.0.0@open-flights/gems/railties-6.1.4.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.3ms | Allocations: 518)
+Completed 200 OK in 21ms (Views: 11.8ms | ActiveRecord: 0.0ms | Allocations: 4170)
+
+
+  [1m[36mAirline Load (0.4ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirline Load (0.7ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReview Load (0.6ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."airline_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["airline_id", 1], ["LIMIT", 11]]
+  [1m[36mAirline Load (0.5ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (1.1ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "United Airlines"], ["image_url", "https://open-flights.s3.amazonaws.com/United-Airlines.png"], ["created_at", "2021-12-20 12:59:20.795962"], ["updated_at", "2021-12-20 12:59:20.795962"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.2ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Southwest"], ["image_url", "https://open-flights.s3.amazonaws.com/Southwest-Airlines.png"], ["created_at", "2021-12-20 12:59:20.821393"], ["updated_at", "2021-12-20 12:59:20.821393"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.3ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Delta"], ["image_url", "https://open-flights.s3.amazonaws.com/Delta.png"], ["created_at", "2021-12-20 12:59:20.824912"], ["updated_at", "2021-12-20 12:59:20.824912"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.2ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Alaska Airlines"], ["image_url", "https://open-flights.s3.amazonaws.com/Alaska-Airlines.png"], ["created_at", "2021-12-20 12:59:20.828694"], ["updated_at", "2021-12-20 12:59:20.828694"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.2ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "JetBlue"], ["image_url", "https://open-flights.s3.amazonaws.com/JetBlue.png"], ["created_at", "2021-12-20 12:59:20.832152"], ["updated_at", "2021-12-20 12:59:20.832152"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.3ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "American Airlines"], ["image_url", "https://open-flights.s3.amazonaws.com/American-Airlines.png"], ["created_at", "2021-12-20 12:59:20.835727"], ["updated_at", "2021-12-20 12:59:20.835727"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAirline Load (0.3ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Airline Load (0.0ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (1.8ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "description", "score", "airline_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Great Airline"], ["description", "I had a lovely time"], ["score", 5], ["airline_id", 1], ["created_at", "2021-12-20 12:59:20.852050"], ["updated_at", "2021-12-20 12:59:20.852050"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "description", "score", "airline_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Bad Airline"], ["description", "I had a bad time"], ["score", 1], ["airline_id", 1], ["created_at", "2021-12-20 12:59:20.857443"], ["updated_at", "2021-12-20 12:59:20.857443"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAirline Load (0.3ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."airline_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["airline_id", 1], ["LIMIT", 11]]
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "airlines"[0m
+  [1m[36mAirline Load (0.7ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirline Load (0.4ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAirline Load (0.3ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAirline Load (0.7ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAirline Load (0.7ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAirline Load (0.9ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mAirline Load (0.7ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1 OFFSET $2[0m  [["LIMIT", 1], ["OFFSET", 2]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.4ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "United Airlines"], ["created_at", "2021-12-20 13:11:53.230876"], ["updated_at", "2021-12-20 13:11:53.230876"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.2ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "United Airlines"], ["created_at", "2021-12-20 13:12:45.940482"], ["updated_at", "2021-12-20 13:12:45.940482"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.8ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "United Airlines"], ["created_at", "2021-12-20 13:13:30.079406"], ["updated_at", "2021-12-20 13:13:30.079406"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.3ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Uni Airlines"], ["created_at", "2021-12-20 13:13:38.410003"], ["updated_at", "2021-12-20 13:13:38.410003"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.2ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Uni Airlines"], ["slug", "uni-airlines"], ["created_at", "2021-12-20 13:14:06.228398"], ["updated_at", "2021-12-20 13:14:06.228398"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAirline Load (1.0ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.6ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (1.0ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "airlines"[0m
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (0.3ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Destroy (0.2ms)[0m  [1m[31mDELETE FROM "reviews" WHERE "reviews"."id" = $1[0m  [["id", 2]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines"[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.9ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.9ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 3]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.9ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 4]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.9ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 5]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.8ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 6]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.7ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 7]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.9ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 8]]
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (1.1ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 9]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.6ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 10]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.5ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 11]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.4ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 12]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Destroy (0.4ms)[0m  [1m[31mDELETE FROM "airlines" WHERE "airlines"."id" = $1[0m  [["id", 13]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "airlines"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.4ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "United Airlines"], ["image_url", "https://open-flights.s3.amazonaws.com/United-Airlines.png"], ["slug", "united-airlines"], ["created_at", "2021-12-20 13:18:29.205231"], ["updated_at", "2021-12-20 13:18:29.205231"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.2ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Southwest"], ["image_url", "https://open-flights.s3.amazonaws.com/Southwest-Airlines.png"], ["slug", "southwest"], ["created_at", "2021-12-20 13:18:29.218802"], ["updated_at", "2021-12-20 13:18:29.218802"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.2ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Delta"], ["image_url", "https://open-flights.s3.amazonaws.com/Delta.png"], ["slug", "delta"], ["created_at", "2021-12-20 13:18:29.222252"], ["updated_at", "2021-12-20 13:18:29.222252"]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.2ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Alaska Airlines"], ["image_url", "https://open-flights.s3.amazonaws.com/Alaska-Airlines.png"], ["slug", "alaska-airlines"], ["created_at", "2021-12-20 13:18:29.225466"], ["updated_at", "2021-12-20 13:18:29.225466"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.4ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "JetBlue"], ["image_url", "https://open-flights.s3.amazonaws.com/JetBlue.png"], ["slug", "jetblue"], ["created_at", "2021-12-20 13:18:29.241641"], ["updated_at", "2021-12-20 13:18:29.241641"]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mAirline Create (0.3ms)[0m  [1m[32mINSERT INTO "airlines" ("name", "image_url", "slug", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "American Airlines"], ["image_url", "https://open-flights.s3.amazonaws.com/American-Airlines.png"], ["slug", "american-airlines"], ["created_at", "2021-12-20 13:18:29.273761"], ["updated_at", "2021-12-20 13:18:29.273761"]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAirline Load (0.3ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE Airline Load (0.0ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.5ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "description", "score", "airline_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Great Airline"], ["description", "I had a lovely time"], ["score", 5], ["airline_id", 14], ["created_at", "2021-12-20 13:18:29.293716"], ["updated_at", "2021-12-20 13:18:29.293716"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mReview Create (0.3ms)[0m  [1m[32mINSERT INTO "reviews" ("title", "description", "score", "airline_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["title", "Bad Airline"], ["description", "I had a bad time"], ["score", 1], ["airline_id", 14], ["created_at", "2021-12-20 13:18:29.297998"], ["updated_at", "2021-12-20 13:18:29.297998"]]
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mAirline Load (0.3ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirline Load (0.7ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirline Load (0.6ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAirline Load (0.6ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAirline Load (0.7ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mReview Load (0.3ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" WHERE "reviews"."airline_id" = $1 /* loading for inspect */ LIMIT $2[0m  [["airline_id", 14], ["LIMIT", 11]]
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."airline_id" = $1[0m  [["airline_id", 14]]
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT AVG("reviews"."score") FROM "reviews" WHERE "reviews"."airline_id" = $1[0m  [["airline_id", 14]]
+  [1m[36mAirline Load (0.3ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT AVG("reviews"."score") FROM "reviews" WHERE "reviews"."airline_id" = $1[0m  [["airline_id", 14]]
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAirline Load (0.9ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."airline_id" = $1[0m  [["airline_id", 14]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."score") FROM "reviews" WHERE "reviews"."airline_id" = $1[0m  [["airline_id", 14]]
+  [1m[36mAirline Load (0.8ms)[0m  [1m[34mSELECT "airlines".* FROM "airlines" ORDER BY "airlines"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews" WHERE "reviews"."airline_id" = $1[0m  [["airline_id", 14]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT AVG("reviews"."score") FROM "reviews" WHERE "reviews"."airline_id" = $1[0m  [["airline_id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews"[0m
+  [1m[36mReview Load (0.7ms)[0m  [1m[34mSELECT "reviews".* FROM "reviews" ORDER BY "reviews"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "reviews"[0m
