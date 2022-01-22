@@ -1,7 +1,7 @@
 class Airline < ApplicationRecord
-  has_many :reviews
+  has_many :reviews, dependent: :destroy
 
-  before_create :slugify
+  before_save :slugify
   
   def slugify
     self.slug = name.parameterize
